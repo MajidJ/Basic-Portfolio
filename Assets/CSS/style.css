@@ -1,12 +1,13 @@
 body {
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
-    margin: 0;
-    background-color:#f4f4f4;
+    margin: 0 auto;
+    /* background-color:#f4f4f4; */
+    background-image: url('../Images/whirlpool.png');
 }
 
 .container {
-    width: 80%;
+    max-width: 960px;
     margin: auto;
     overflow: hidden;
 }
@@ -65,10 +66,48 @@ header a:hover {
 }
 
 
-/* sidebar */
+/* main */
 
-.sidebar img {
-    width: 30px;
+main {
+    padding:20px;
+}
+
+.column {
+    float: left;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    
+}
+
+.column.main {
+    width: 610px;
+    margin-right: 40px;
+}
+
+.column.main img {
+    float: left;
+    padding-right: 20px;
+}
+
+.column.side {
+    width: 230px;
+}
+
+.column.side img {
+    width: 60px;
+}
+
+.column.side ul {
+    min-width: 100px;
+    float: left;
+    margin:0;
+    padding-left:15px;
+}
+
+.column.side li {
+    display: inline;
+    margin-right: 7px;
 }
 
 /* footer */
@@ -82,13 +121,26 @@ footer {
 
 }
 
-@media(max-width: 768px) {
+@media(max-width: 1000px) {
     header,
     .page-title,
     header nav,
-    header li {
+    header li,
+    .column,
+    .column.side {
         float: none;
         text-align: center;
+        margin: 20px auto;
         width: 100%;
+    }
+    .column.main {
+        float: none;
+        text-align: left;
+        width: 100%;
+        margin-top: 20px;
+        min-height: 375px;
+    }
+    p {
+        padding-right: 50px;
     }
 }
