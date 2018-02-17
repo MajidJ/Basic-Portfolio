@@ -1,3 +1,19 @@
+/* variables 
+
+Teal color (used for headings and backgrounds): #4aaaa5
+Regular font color (used for paragraphs and all text besides the headings): #777777
+Main header background color: #ffffff
+Main header border color: #cccccc
+Footer background color: #666666
+Main content background color: #ffffff
+Main content border color: #dddddd*/
+
+
+
+
+
+
+
 body {
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
@@ -21,28 +37,28 @@ ul {
 
 header {
     background: #ffffff;
-    color: #595959;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #8c8c8c 3px solid;
+    min-height: 50px;
+    border-bottom: #cccccc 3px solid;
 }
 
 header a {
-    color: #595959;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
 }
 
 header li {
-    float: left;
     display: inline;
-    padding: 0 10px;
+    padding-left: 20px;
 }
 
 header nav {
     float: right;
-    margin: 10px 0;
+    margin-top: 45px;
+    font-size: 16px;
+}
+
+header nav a {
+    color: #8c8c8c;
 }
 
 .page-title {
@@ -51,17 +67,21 @@ header nav {
 
 .page-title h1 {
     margin:0;
-    background-color: aqua;
-    padding: 15px;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-size: 35px;
+    padding: 25px;
 }
 
 .current a {
     font-weight: bold;
-    color: rgb(180, 21, 21);
+    color: #4aaaa5;
 }
 
 header a:hover {
-    color: #8c8c8c;
+    cursor: pointer;
+    color:#8c8c8c;
     font-weight: bold;
 }
 
@@ -75,23 +95,24 @@ main {
 .column {
     float: left;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 10px 25px 25px 25px;
     margin-top: 20px;
+    line-height: 1.5em;
     
 }
 
 .column.main {
-    width: 610px;
+    width: 600px;
     margin-right: 40px;
+}
+
+.column.side {
+    width: 220px;
 }
 
 .column.main img {
     float: left;
     padding-right: 20px;
-}
-
-.column.side {
-    width: 230px;
 }
 
 .column.side img {
@@ -102,7 +123,6 @@ main {
     min-width: 100px;
     float: left;
     margin:0;
-    padding-left:15px;
 }
 
 .column.side li {
@@ -110,13 +130,90 @@ main {
     margin-right: 7px;
 }
 
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color: #4aaaa5;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color: #4aaaa5;
+    font-size: 25px;
+}
+
+hr {
+    margin-bottom: 20px;
+    background-color: #dddddd;
+    height: 2px;
+    border-style: none;
+}
+
+.column p {
+    color: #777777;
+    line-height: 2em;
+    font-size: 16px;
+}
+
+.halfer {
+    float: left;
+    width: 50%;
+}
+
+figure {
+    /* margin: 30px auto; */
+}
+
+figcaption {
+    position: relative;
+    /* margin: -70px 0 0 30px; */
+    /* padding: 5px 10px; */
+    background-color: #4aaaa5;
+    color: #ffffff;
+    width: 150px;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+
+form {
+    color: #777777;
+    font-size: 16px;
+}
+
+.input-info {
+    width:100%;
+    margin: 10px 0;
+    height: 2em;
+}
+
+.input-message {
+    width:100%;
+    margin: 10px 0;
+    height: 10em;
+}
+
+.submit-button {
+    background-color: #4aaaa5;
+    margin: 10px 0;
+    padding: 10px;
+    color:#ffffff;
+    border: none;
+}
+
 /* footer */
 
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     padding: 20px;
     margin-top: 20px;
     color: #ffffff;
-    background-color: #595959;
+    background-color: #666666;
+    border-top: #4aaaa5 10px solid;
     text-align: center;
 
 }
@@ -126,21 +223,29 @@ footer {
     .page-title,
     header nav,
     header li,
-    .column,
-    .column.side {
+    .input-info,
+    .submit-button,
+    .input-message {
         float: none;
         text-align: center;
         margin: 20px auto;
         width: 100%;
     }
-    .column.main {
-        float: none;
-        text-align: left;
-        width: 100%;
-        margin-top: 20px;
-        min-height: 375px;
+    .container {
+        width:100%;
+        margin: 0 auto;
     }
-    p {
-        padding-right: 50px;
+    .column.main,
+    .column.side {
+        position: relative;
+        float: none;
+        width: 90%;
+        text-align: left;
+        margin: 20px auto;
+        padding: 10px 5%;
+        min-height: 175px;
+    }
+    main {
+        padding-bottom: 150px;
     }
 }
